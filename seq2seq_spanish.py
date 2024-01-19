@@ -250,5 +250,5 @@ for epoch in range(num_epochs):
     if batch_idx % 10 == 0:
         print(f"Epoch [{epoch + 1}/{num_epochs}] Batch {batch_idx}/{len(train_loader)} Loss: {loss.item()}")
 
-score = bleu(test_data[1:100], model, spanish, english, device)
+score = bleu(test_data[1:100], model, spacy_es, spanish, english, device)
 print(f"Bleu score {score*100:.2f}")
